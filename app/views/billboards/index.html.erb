@@ -1,2 +1,7 @@
-<h1>Billboards#index</h1>
-<p>Find me in app/views/billboards/index.html.erb</p>
+<h1> Billboards </h1>
+<%= link_to "New Billboard Fun Stuff", new_billboard_path %>
+<p><%  @billboards.each do |b| %></p>
+  <%= link_to b.name, billboard_path(b.id)  %>
+  <li>fun stuff</li>
+    <%= link_to 'Delete this Billboard', billboard_path(b.id), method: :delete %>
+  <% end %>

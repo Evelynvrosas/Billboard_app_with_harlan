@@ -1,0 +1,10 @@
+<h1><%= @billboard.id ? "Edit This Billboard" : "Create New Billboard"%></h1>
+
+<%= form_for @billboard do |f|  %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit "Submit" %>
+
+<% end %>
